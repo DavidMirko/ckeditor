@@ -11,8 +11,10 @@ class Ckeditor::PicturesController < Ckeditor::ApplicationController
   end
 
   def create
-    @picture = Ckeditor.picture_model.new
-    respond_with_asset(@picture)
+    uploaded_file = params[:upload] # Access the uploaded file from the "upload" parameter
+    filename = uploaded_file.original_filename # Get the original filename of the uploaded file
+    @picture = Ckeditor.picture_model.new # Create a new Picture object
+    @picture.assign_attributes(data: uploaded_file, data_file_name: filename) # Set attributes including the filename
   end
 
   def destroy

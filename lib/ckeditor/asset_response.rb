@@ -16,7 +16,7 @@ module Ckeditor
       @request = request
       @params = request.params
 
-      @asset.data = Ckeditor::Http.normalize_param(file, @request)
+      # @asset.data = Ckeditor::Http.normalize_param(file, @request)
     end
 
     def json?
