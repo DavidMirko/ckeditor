@@ -8,9 +8,9 @@
   <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
 
   <% if Ckeditor.assets_pipeline_enabled? -%>
-    <link href="/assets/javascripts/ckeditor/filebrowser/stylesheets/uploader.scss" type="text/css" rel="stylesheet">
+    <link href="/assets/ckeditor/filebrowser/stylesheets/uploader.scss" type="text/css" rel="stylesheet">
     <% ["jquery.tmpl.js", "fileuploader.js", "rails.js", "application.js"].each do |js| -%>
-      <script src="/assets/javascripts/ckeditor/filebrowser/javascripts/<%= js %>" type="text/javascript"></script>
+      <script src="/assets/ckeditor/filebrowser/javascripts/<%= js %>" type="text/javascript"></script>
     <% end -%>
   <% else -%>
     <link href="/javascripts/ckeditor/filebrowser/stylesheets/uploader.css" type="text/css" rel="stylesheet">
